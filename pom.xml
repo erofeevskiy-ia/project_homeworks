@@ -6,7 +6,11 @@
 
     <groupId>com.epam.javacore</groupId>
     <artifactId>project_homeworks</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>homework_2_oop</module>
+    </modules>
 
     <properties>
         <java.version>9</java.version>
