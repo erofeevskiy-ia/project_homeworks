@@ -1,7 +1,10 @@
 package com.epam.javacore.homework.hw2.task_1;
 
+import lombok.Getter;
+
 import java.awt.*;
 
+@Getter
 public class Pen {
     private Color color;
 
