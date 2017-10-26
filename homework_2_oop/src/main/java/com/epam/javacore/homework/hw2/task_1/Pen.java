@@ -4,7 +4,7 @@ import lombok.Getter;
 
 import java.awt.*;
 
-@Getter
+
 public class Pen {
     private Color color;
 
