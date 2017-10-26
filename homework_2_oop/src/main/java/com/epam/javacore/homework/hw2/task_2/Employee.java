@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Employee {
-    List list = new ArrayList();
+    private List<Stationery> list = new ArrayList();
 
     boolean addStationery(Stationery st) {
         if (st==null) return false;
@@ -12,4 +12,10 @@ public class Employee {
         return true;
     }
 
+    public int getCostStationary() {
+        int sum=0;
+        for(Stationery st: list)
+            sum+=st.getCost();
+        return sum;
+    }
 }

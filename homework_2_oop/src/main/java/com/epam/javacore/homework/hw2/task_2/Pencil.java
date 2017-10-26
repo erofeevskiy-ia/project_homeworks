@@ -8,7 +8,7 @@ public class Pencil implements Stationery {
     }
 
     @Override
-    public int getCost(int cost) {
+    public int getCost() {
         return this.cost;
     }
 }
