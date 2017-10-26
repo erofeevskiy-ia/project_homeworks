@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Employee {
-    private List<Stationery> list = new ArrayList();
+    private List<Stationery> list = new ArrayList<>();
 
     boolean addStationery(Stationery st) {
         if (st==null) return false;
