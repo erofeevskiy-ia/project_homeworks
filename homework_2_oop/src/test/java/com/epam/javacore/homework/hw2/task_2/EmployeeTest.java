@@ -11,5 +11,8 @@ class EmployeeTest {
     @Test
     void testAddStationery() {
         assertEquals(true,employee.addStationery(new Pencil(123)));
+        assertEquals(false,employee.addStationery(null));
     }
+
+
 }
