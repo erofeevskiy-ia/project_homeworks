@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>homework_2_oop</module>
+        <module>homework_3_string</module>
     </modules>
 
     <properties>
