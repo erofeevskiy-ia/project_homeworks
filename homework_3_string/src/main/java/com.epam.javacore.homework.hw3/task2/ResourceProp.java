@@ -6,13 +6,20 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class ResourceProp {
-    private ResourceBundle resourceBundle;
+    private ResourceBundle resourceBundleQuestions;
+    private ResourceBundle resourceBundleAnswers;
 
     public ResourceProp(Locale local) {
-        resourceBundle = ResourceBundle.getBundle("questions",local);
+        resourceBundleQuestions = ResourceBundle.getBundle("questions",local);
     }
 
-    public  String getValue(String key){
-        return resourceBundle.getString(key);
+    public ResourceBundle getResourceBundleQuestion(){
+        return resourceBundleQuestions;
     }
+
+    public ResourceBundle getResourceBundleAnswers(){
+        return resourceBundleAnswers;
+    }
+
+
 }
