@@ -17,13 +17,14 @@ public class CrazyLogger  {
        return null;
    }
 
-   public boolean addLogMessage(String message){
+   public void addLogMessage(String message){
        LocalDateTime localDateTime = LocalDateTime.now();
        crazyLog.append(localDateTime.format(dateTimeFormatter));
        crazyLog.append(message);
        crazyLog.append("\n");
-       return true;
    }
+
+
 
 
 }
