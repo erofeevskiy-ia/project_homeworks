@@ -48,29 +48,29 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
-                    <compilerArgs>
+                    <!--<compilerArgs>
                         <arg>-parameters</arg>
-                        <!--<arg>add-modules=java.xml.ws.annotation</arg>-->
-                        <!--<arg>permit-illegal-access</arg>-->
-                        <arg>-J--add-opens</arg>
+                        &lt;!&ndash;<arg>add-modules=java.xml.ws.annotation</arg>&ndash;&gt;
+                        &lt;!&ndash;<arg>permit-illegal-access</arg>&ndash;&gt;
+                        <arg>-J&#45;&#45;add-opens</arg>
                         <arg>-Jjdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
-                        <arg>-J--add-opens</arg>
+                        <arg>-J&#45;&#45;add-opens</arg>
                         <arg>-Jjdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
-                        <arg>-J--add-opens</arg>
+                        <arg>-J&#45;&#45;add-opens</arg>
                         <arg>-Jjdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
-                        <arg>-J--add-opens</arg>
+                        <arg>-J&#45;&#45;add-opens</arg>
                         <arg>-Jjdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
-                        <arg>-J--add-opens</arg>
+                        <arg>-J&#45;&#45;add-opens</arg>
                         <arg>-Jjdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED</arg>
-                        <arg>-J--add-opens</arg>
+                        <arg>-J&#45;&#45;add-opens</arg>
                         <arg>-Jjdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
-                        <arg>-J--add-opens</arg>
+                        <arg>-J&#45;&#45;add-opens</arg>
                         <arg>-Jjdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-                        <arg>-J--add-opens</arg>
+                        <arg>-J&#45;&#45;add-opens</arg>
                         <arg>-Jjdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
-                        <arg>-J--add-opens</arg>
+                        <arg>-J&#45;&#45;add-opens</arg>
                         <arg>-Jjdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
-                    </compilerArgs>
+                    </compilerArgs>-->
                 </configuration>
             </plugin>
 
