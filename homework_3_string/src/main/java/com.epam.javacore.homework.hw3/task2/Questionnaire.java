@@ -21,9 +21,10 @@ public class Questionnaire {
                 resourceProp = new ResourceProp(new Locale("en", "US"));
                 break;
         }
+        int countQuestions=0;
         for (String s : resourceProp.getResourceBundleQuestion().keySet()) {
                 System.out.println(resourceProp.getResourceBundleQuestion().getString(s));
-
+                countQuestions++;
         }
 
         if ("2".equals(selectLanguage))
@@ -31,11 +32,12 @@ public class Questionnaire {
         else
             System.out.println("Enter number of question for printing answer(for exit enter: 000)");
 
-        StringBuilder sb = new StringBuilder("answer");
-        while(!"000".equals(selectLanguage )) {//FIXME
-            selectLanguage = new Scanner(System.in).nextLine();
+        selectLanguage = new Scanner(System.in).nextLine();
+        StringBuilder builderForSearchAnswer = new StringBuilder("answer");
+        while(!("000".equals(selectLanguage )||Integer.parseInt(selectLanguage)>countQuestions)) { //FIXME problem with parseInt
             System.out.println(resourceProp.getResourceBundleAnswers()
-                    .getString(String.valueOf(sb)+selectLanguage));
+                    .getString(String.valueOf(builderForSearchAnswer)+selectLanguage));
+            selectLanguage = new Scanner(System.in).nextLine();
         }
     }
 }
