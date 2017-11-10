@@ -1,9 +1,6 @@
 package com.epam.javacore.homework.hw3.task2;
 
-import java.io.UnsupportedEncodingException;
-import java.util.Enumeration;
 import java.util.Locale;
-import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class Questionnaire {
@@ -35,7 +32,7 @@ public class Questionnaire {
             System.out.println("Enter number of question for printing answer(for exit enter: 000)");
 
         StringBuilder sb = new StringBuilder("answer");
-        while(selectLanguage!="000") {
+        while(!"000".equals(selectLanguage )) {//FIXME
             selectLanguage = new Scanner(System.in).nextLine();
             System.out.println(resourceProp.getResourceBundleAnswers()
                     .getString(String.valueOf(sb)+selectLanguage));
