@@ -11,6 +11,7 @@ public class ResourceProp {
 
     public ResourceProp(Locale local) {
         resourceBundleQuestions = ResourceBundle.getBundle("questions",local);
+        resourceBundleAnswers = ResourceBundle.getBundle("answers",local);
     }
 
     public ResourceBundle getResourceBundleQuestion(){
