@@ -8,15 +8,17 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class FinderRegExp {
-    private final static String ENCODE = "windows-1251";
-    private final static String PATTERN_PICTURE = "[Рр]ис\\.\\s?\\w+[^)]";
-    private final static String PATTERN_PICTURE_FOR_SIGNATURE = "Рис\\.\\s?\\w+((&nbsp;)|(\\s))[А-Я]";
 
     private String textForAnalyze;
 
-    public FinderRegExp(String path){
+    private static final String ENCODE = "windows-1251";
+    private static final String PATTERN_PICTURE_FOR_EMPH_SENTENCE = "([A-ZА-Я][^.?!]*?)?(?<!\\\\w)(?i)[Рр]ис(\\.|ун)(ке|ок|)\\s\\d{1,2}(?!\\\\w)[^.?!]*?[.?!]";
+    private static final String PATTERN_PICTURE_REF_IN_DIV = "v>.*[Рр]ис(\\.|ун)(ке|ок|)\\s\\d{1,2}.*<";
+
+
+    public FinderRegExp(String path) {
         try {
-            textForAnalyze = readFile(path,ENCODE);
+            textForAnalyze = readFile(path, ENCODE);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -27,17 +29,36 @@ public class FinderRegExp {
         return new String(encoded, Charset.forName(encode));
     }
 
-    public String getFileString(){
+    public String getFileString() {
         return textForAnalyze;
     }
 
-    void find(){
-       // StringBuilder sb=new StringBuilder();
-        Pattern p = Pattern.compile(PATTERN_PICTURE_FOR_SIGNATURE);
+    String findRef() {
+        StringBuilder sb = new StringBuilder();
+        Pattern p = Pattern.compile(PATTERN_PICTURE_REF_IN_DIV);
         Matcher m = p.matcher(textForAnalyze);
-        while(m.find()){
-            System.out.println(m.group(0));
+        while (m.find()) {
+            sb.append(m.group(0));
+            sb.append("\n");
         }
-
+        return sb.toString();
     }
+
+    String findSentence(String analyzingString) {
+        Pattern p = Pattern.compile(PATTERN_PICTURE_FOR_EMPH_SENTENCE);
+        Matcher m = p.matcher(analyzingString);
+        StringBuilder sb = new StringBuilder();
+        int count = 0;
+        while (m.find()) {
+            sb.append("#")
+                    .append(Integer.toString(count))
+                    .append(")")
+                    .append(m.group(0))
+                    .append("\n");
+            count++;
+        }
+        return sb.toString();
+    }
+
+
 }
