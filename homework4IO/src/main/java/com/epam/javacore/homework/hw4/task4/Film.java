@@ -1,8 +1,10 @@
 package com.epam.javacore.homework.hw4.task4;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Film {
+public class Film implements Serializable {
+    @SuppressWarnings("WeakerAccess")
     String topic;
     List<Actor> actorList;
 
