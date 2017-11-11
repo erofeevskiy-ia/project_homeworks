@@ -12,6 +12,7 @@
         <module>homework_2_oop</module>
         <module>homework_3_string</module>
         <module>homework4IO</module>
+        <module>homework5Exception</module>
     </modules>
 
     <properties>
