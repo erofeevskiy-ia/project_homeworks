@@ -6,7 +6,7 @@ public class FileDirectoryAnalyzer {
     private FileDirectoryAnalyzer() {
     }
 
-    static public void seeTheDirectory(String pathFile) {
+    public static void seeTheDirectory(String pathFile) {
         File file = new File(pathFile);
         System.out.println("You are in " + pathFile);
         if (file.isDirectory()) {
@@ -21,7 +21,7 @@ public class FileDirectoryAnalyzer {
         }
     }
 
-    static public boolean deleteFile(String pathFile) {
+    public static boolean deleteFile(String pathFile) {
         File file = new File(pathFile);
         boolean isDirectory = false;
         if (file.isDirectory()) isDirectory = true;
@@ -39,9 +39,8 @@ public class FileDirectoryAnalyzer {
     }
 
 
-
     public static boolean makeDir(String inPath, String nameOfNewDir) {
-        String newPath=inPath + "//" + nameOfNewDir;
+        String newPath = inPath + "//" + nameOfNewDir;
         File dir = new File(newPath);
         boolean created = dir.mkdir();
         if (created) {
@@ -55,9 +54,9 @@ public class FileDirectoryAnalyzer {
 
     public static boolean writeInFile(String path, String stringForWriting) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(
-                     new OutputStreamWriter(
-                             new FileOutputStream(path),"UTF-16"))) {
-                bufferedWriter.write(stringForWriting);
+                new OutputStreamWriter(
+                        new FileOutputStream(path), "UTF-16"))) {
+            bufferedWriter.write(stringForWriting);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             return false;
