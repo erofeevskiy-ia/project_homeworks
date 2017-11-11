@@ -11,6 +11,7 @@
     <modules>
         <module>homework_2_oop</module>
         <module>homework_3_string</module>
+        <module>homework4IO</module>
     </modules>
 
     <properties>
