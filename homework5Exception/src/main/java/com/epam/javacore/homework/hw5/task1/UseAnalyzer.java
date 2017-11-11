@@ -6,7 +6,7 @@ public class UseAnalyzer {
         //new FileDirectoryAnalyzer(path).start();
         FileDirectoryAnalyzer.seeTheDirectory(path);
         //FileDirectoryAnalyzer.deleteFile(path);
-        System.out.println(FileDirectoryAnalyzer.makeDir(path, "newDir"));
-
+        //System.out.println(FileDirectoryAnalyzer.makeDir(path, "newDir"));
+        FileDirectoryAnalyzer.writeInFile("C:\\!all\\!epam\\school_Autmn_Lapin\\project_homeworks\\homework5Exception\\src\\main\\java\\com\\epam\\javacore\\homework\\hw5\\task1\\forTel","Hello");
     }
 }

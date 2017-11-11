@@ -1,16 +1,10 @@
 package com.epam.javacore.homework.hw5.task1;
 
-import java.io.File;
-import java.util.Scanner;
+import java.io.*;
 
 public class FileDirectoryAnalyzer {
-   /* private String path;
-    private File file;
-
-    public FileDirectoryAnalyzer(String path) {
-        this.path = path;
-        file = new File(path);
-    }*/
+    private FileDirectoryAnalyzer() {
+    }
 
     static public void seeTheDirectory(String pathFile) {
         File file = new File(pathFile);
@@ -44,19 +38,11 @@ public class FileDirectoryAnalyzer {
         return true;
     }
 
-  /*  public void start() {
-        Scanner in = new Scanner(System.in);
-        int choice;
-        while ((choice = in.nextInt()) != 0) {
-            System.out.println("write '1' to make file");
-            System.out.println("write '2' to make file");
-            System.out.println("write '3' to delete file");
-            System.out.println("write '0' to exit ");
-        }
-    }*/
+
 
     public static boolean makeDir(String inPath, String nameOfNewDir) {
-        File dir = new File(inPath + "//" + nameOfNewDir);
+        String newPath=inPath + "//" + nameOfNewDir;
+        File dir = new File(newPath);
         boolean created = dir.mkdir();
         if (created) {
             System.out.println("Directory was created");
@@ -65,5 +51,20 @@ public class FileDirectoryAnalyzer {
             System.out.println("Directory wan't created");
             return false;
         }
+    }
+
+    public static boolean writeInFile(String path, String stringForWriting) {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(
+                     new OutputStreamWriter(
+                             new FileOutputStream(path),"UTF-16"))) {
+                bufferedWriter.write(stringForWriting);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return false;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
     }
 }
