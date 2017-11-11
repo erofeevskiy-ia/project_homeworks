@@ -1,42 +1,25 @@
-package com.epam.javacore.homework.hw2.task_1;
-
-
-import java.awt.*;
-
-
-public class Pen {
-    private Color color;
-
-    public Pen(Color color) {
-        this.color = color;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Pen pen = (Pen) o;
-
-        return color != null ? color.equals(pen.color) : pen.color == null;
-    }
-
-    @Override
-    public int hashCode() {
-        return color != null ? color.hashCode() : 0;
-    }
-
-    /**
-     *
-     * @return string-describing of currentObject. example: "Color of this pen in RGB-format is[r=12,g=12,b=12]"
-     */
-    @Override
-    public String toString() {
-        Color cur = this.color;
-        return "Color of this pen in RGB-format is "
-                + "[r=" + cur.getRed() + ",g="
-                + cur.getGreen() + ",b=" + cur.getBlue() + "]";
-    }
-
-
-}
+package
+import
+public
+class
+private
+public
+this
+public
+boolean
+if
+this
+return
+if
+return
+return
+public
+int
+return
+return
+this
+public
+this
+return
+this
+24
