@@ -62,8 +62,8 @@ public class CharInputOutput {
     }
 
     public static void main(String[] args) {
-        String so = "C:\\!all\\!epam\\school_Autmn_Lapin\\project_homeworks\\homework4IO\\src\\main\\java\\com\\epam\\javacore\\homework\\hw4\\task2\\out.txt";
-        String si = "C:\\!all\\!epam\\school_Autmn_Lapin\\project_homeworks\\homework_2_oop\\src\\main\\java\\com\\epam\\javacore\\homework\\hw2\\task_3\\SetOfNovice.java";
+        String so = "homework4IO\\src\\main\\java\\com\\epam\\javacore\\homework\\hw4\\task2\\out.txt";
+        String si = "homework_2_oop\\src\\main\\java\\com\\epam\\javacore\\homework\\hw2\\task_3\\SetOfNovice.java";
         new CharInputOutput(si, so);
     }
 }
