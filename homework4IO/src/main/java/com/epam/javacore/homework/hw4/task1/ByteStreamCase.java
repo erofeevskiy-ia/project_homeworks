@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ByteStreamCase {
-    private static final List<String> KEY_WORDS_JAVA;
+    public static final List<String> KEY_WORDS_JAVA;
 
     static {
         KEY_WORDS_JAVA = Arrays.asList(
