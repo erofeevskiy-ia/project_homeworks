@@ -13,6 +13,7 @@
         <module>homework_3_string</module>
         <module>homework4IO</module>
         <module>homework5Exception</module>
+        <module>homework6Collections</module>
     </modules>
 
     <properties>
