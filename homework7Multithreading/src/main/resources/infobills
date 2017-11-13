@@ -1,12 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<bills>
-    <bill id="123">
-        <balance>5000</balance>
-    </bill>
-    <bill id="212">
-        <balance>5000</balance>
-    </bill>
-    <bill id="111">
-        <balance>5000</balance>
-    </bill>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><bills>
+    <bill id="123">60000</bill>
+    <bill id="212">500</bill>
+    <bill id="111">40000</bill>
 </bills>
