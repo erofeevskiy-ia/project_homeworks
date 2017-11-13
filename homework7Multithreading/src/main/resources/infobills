@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bills>
+    <bill id="123">
+        <balance>5000</balance>
+    </bill>
+    <bill id="212">
+        <balance>5000</balance>
+    </bill>
+    <bill id="111">
+        <balance>5000</balance>
+    </bill>
+</bills>

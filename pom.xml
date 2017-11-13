@@ -14,6 +14,7 @@
         <module>homework4IO</module>
         <module>homework5Exception</module>
         <module>homework6Collections</module>
+        <module>homework7Multithreading</module>
     </modules>
 
     <properties>
