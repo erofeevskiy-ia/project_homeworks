@@ -14,7 +14,7 @@ public class SharedResource {
 	}
 
 	public Integer getELement() {
-		if (list.size() > 0) {
+		if (!list.isEmpty()) {
 			return list.remove(0);
 		} 
 		return null;

@@ -44,8 +44,7 @@ class IntegerSetterGetter extends Thread {
 					+ " хочет извлечь число.");
 			number = resource.getELement();
 			while (number == null) {
-				System.out.println("Поток " + getName()
-						+ " ждет пока очередь заполнится.");
+				System.out.println("Поток" + getName()+ " ждет пока очередь заполнится.");
 				resource.wait();
 				System.out
 						.println("Поток " + getName() + " возобновил работу.");
