@@ -19,7 +19,7 @@ import java.io.IOException;
 
 public class Bill {
     private final String name;
-    private final static String URI = "homework7Multithreading\\src\\main\\resources\\infobills";
+    private static final String URI = "homework7Multithreading\\src\\main\\resources\\infobills";
     private long balance;
 
     public static synchronized void transaction(Bill fromBill, Bill toBill, long deposit) {
