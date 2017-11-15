@@ -15,6 +15,7 @@
         <module>homework5Exception</module>
         <module>homework6Collections</module>
         <module>homework7Multithreading</module>
+        <module>homework8JDBC</module>
     </modules>
 
     <properties>
