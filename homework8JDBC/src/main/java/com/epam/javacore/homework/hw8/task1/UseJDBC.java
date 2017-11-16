@@ -12,6 +12,9 @@ public class UseJDBC {
         book_2.setId(2);
         JDBCWork.updateUser(book_2);
         System.out.println(book_2);
+        Book book_3 = JDBCWork.deleteUser();
+        System.out.println(book_3);
+
         ConnectionBase.disconnect();
     }
 }
